@@ -31,7 +31,8 @@ edit /boot/firmware/config.txt:<br>
 <b>sudo nano /boot/firmware/config.txt</b>
 
 remove or disable all other sound overlays and comment out dtparam=audio=on:<br>
-<b>#dtparam=audio=on</b>
+<b>#dtparam=audio=on<br>
+dtoverlay=vc4-kms-v3d,noaudio</b>
 
 now add:<br>
 <b>dtparam=i2s=on<br>
