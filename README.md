@@ -11,8 +11,10 @@ hook up the ADC like this:<br>
 <li>FSY to RPi 3.3V</li>
 </ul>
 </b>
+
 Solder a wire from 3.3V to FMT0 to select i2s mode. This is necessary because the + line is not connected to 3.3V.
 Leave MODE0 and MODE1 as they are to select SLAVE mode.
+
 
 compile pcm1802.dts with:<br>
 <b> dtc -@ -I dts -O dtb -o pcm1802.dtbo pcm1802.dts</b>
