@@ -1,10 +1,13 @@
 The DTS file is for this ADC:<br>
 https://nl.aliexpress.com/item/32830756646.html
 
+An external oscillator is necessary to get the pcm1802 to work:<br>
+https://eu.mouser.com/ProductDetail/ABRACON/ACHL-24.576MHZ-EK
+
 hook up the ADC like this:<br>
 <b>
 <ul>
-<li>SCK to RPi GPIO 4</li>
+<li>SCK to the output of the 24.576MHz oscillator</li>
 <li>BCK to RPi GPIO 18</li>
 <li>DOUT to RPi GPIO 20</li>
 <li>LRCK to RPi GPIO 19</li>
@@ -13,8 +16,9 @@ hook up the ADC like this:<br>
 </ul>
 </b>
 
-Solder a wire from 3.3V to FMT0 to select i2s mode. This is necessary because the + line is not connected to 3.3V.
-Leave MODE0 and MODE1 as they are to select SLAVE mode as the board has no oscillator.
+Solder a wire from 3.3V one of the + pads and then to FMT0 to select I2S mode. 
+This is necessary because the + line is not connected to 3.3V.
+Solder the MODE0 and MODE1 pads to + as well to select MASTER mode.
 
 
 compile pcm1802.dts with:<br>
@@ -39,7 +43,10 @@ save the file and reboot:<br>
 does it appear?:<br>
 <b> arecord -l</b>
 
-if yes then run to test:<br>
-<b> arecord -D hw:PCM1802 -f S32_LE -r 48000 -c 2 -d 30 test.wav</b>
+something like the following should show:<br>
+<b>card 0: PCM1802ADC [PCM1802-ADC], device 0: bcm2835-i2s-dir-hifi dir-hifi-0 [bcm2835-i2s-dir-hifi dir-hifi-0]<br>
+  Subdevices: 1/1<br>
+  Subdevice #0: subdevice #0</b>
 
-I could only get it to record silence. Also I measured no squarewave on GPIO 4 which should supply something like 12.288 MHz to SCK for recording in 48kHz. If someone gets it to work I would love to hear about it! Good luck!
+if yes then run to test:<br>
+<b>arecord -D hw:PCM1802ADC -r 96000 -f S32_LE -c 2 -V stereo -d 30 test.wav</b>
