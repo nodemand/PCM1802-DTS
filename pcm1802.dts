@@ -39,7 +39,7 @@
         };
     };
 
-    /* Forceer de bestaande I2S controller op 'okay' en voeg de cell-definitie toe */
+    /* Force the existing I2S controller to 'okay' and add cell-definition */
     fragment@1 {
         target = <&i2s>;
         __overlay__ {
