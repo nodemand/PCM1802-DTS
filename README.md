@@ -2,7 +2,7 @@ The DTS file is for this ADC:<br>
 https://nl.aliexpress.com/item/32830756646.html
 
 An external oscillator is necessary to get the pcm1802 to work:<br>
-https://eu.mouser.com/ProductDetail/ABRACON/ACHL-24.576MHZ-EK
+https://mou.sr/4bWy2iM
 
 hook up the ADC like this:<br>
 <b>
