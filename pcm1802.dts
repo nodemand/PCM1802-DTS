@@ -1,0 +1,39 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "brcm,bcm2835";
+
+    fragment@0 {
+        target = <&i2s>;
+        __overlay__ {
+            status = "okay";
+        };
+    };
+
+    fragment@1 {
+        target-path = "/";
+        __overlay__ {
+            pcm1802_codec: pcm1802-codec {
+                #sound-dai-cells = <0>;
+                compatible = "linux,spdif-dir";
+                status = "okay";
+            };
+
+            pcm1802_sound {
+                compatible = "simple-audio-card";
+                simple-audio-card,name = "PCM1802";
+                simple-audio-card,format = "i2s";
+                status = "okay";
+
+                simple-audio-card,cpu {
+                    sound-dai = <&i2s>;
+                };
+
+                simple-audio-card,codec {
+                    sound-dai = <&pcm1802_codec>;
+                };
+            };
+        };
+    };
+};
