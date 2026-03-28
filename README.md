@@ -51,3 +51,5 @@ something like the following should show:<br>
 
 if yes then run to test:<br>
 <b>arecord -D hw:PCM1802ADC -r 96000 -f S32_LE -c 2 -V stereo -d 30 test.wav</b>
+
+Have fun!
