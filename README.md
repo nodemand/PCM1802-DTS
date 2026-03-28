@@ -18,7 +18,7 @@ hook up the ADC like this:<br>
 
 Solder a wire from 3.3V to one of the + pads and then to FMT0 to select I2S mode. 
 This is necessary because the + line is not connected to 3.3V.
-Solder the MODE0 and MODE1 pads to + as well to select MASTER mode.
+Solder the MODE0 and MODE1 pads to + as well to select a MASTER mode compatible with 96kHz recording using the 24.576MHz osc.
 
 
 compile pcm1802.dts with:<br>
