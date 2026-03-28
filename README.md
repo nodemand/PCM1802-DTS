@@ -4,6 +4,7 @@ https://nl.aliexpress.com/item/32830756646.html
 hook up the ADC like this:<br>
 <b>
 <ul>
+<li>SCK to RPi GPIO 4</li>
 <li>BCK to RPi GPIO 18</li>
 <li>DOUT to RPi GPIO 20</li>
 <li>LRCK to RPi GPIO 19</li>
