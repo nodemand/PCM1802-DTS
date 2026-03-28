@@ -1,4 +1,4 @@
-The DTS file is for this ADC:<br>
+The DTS file is for this ADC on a RPi Zero 2W:<br>
 https://nl.aliexpress.com/item/32830756646.html
 
 hook up the ADC like this:<br>
