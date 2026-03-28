@@ -12,7 +12,7 @@ hook up the ADC like this:<br>
 <li>DOUT to RPi GPIO 20</li>
 <li>LRCK to RPi GPIO 19</li>
 <li>PDW to RPi 3.3V</li>
-<li>FSY to RPi 3.3V</li>
+<li>FSY not connected</li>
 </ul>
 </b>
 
