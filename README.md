@@ -42,5 +42,4 @@ does it appear?:<br>
 if yes then run to test:<br>
 <b> arecord -D hw:PCM1802 -f S32_LE -r 48000 -c 2 -d 30 test.wav</b>
 
-I could only get it to record silence. Also I measured no squarewave on GPIO 4 which should supply something like 12.288 MHz to SCK.
-If someone gets it to work I would love to hear about it! Good luck!
+I could only get it to record silence. Also I measured no squarewave on GPIO 4 which should supply something like 12.288 MHz to SCK for recording in 48kHz. If someone gets it to work I would love to hear about it! Good luck!
