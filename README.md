@@ -16,7 +16,7 @@ hook up the ADC like this:<br>
 </ul>
 </b>
 
-Solder a wire from 3.3V one of the + pads and then to FMT0 to select I2S mode. 
+Solder a wire from 3.3V to one of the + pads and then to FMT0 to select I2S mode. 
 This is necessary because the + line is not connected to 3.3V.
 Solder the MODE0 and MODE1 pads to + as well to select MASTER mode.
 
