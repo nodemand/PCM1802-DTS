@@ -1,3 +1,5 @@
+<h1>PCM1802 ADC running on Raspberry Pi</h1>
+
 The DTS file is for this ADC:<br>
 https://nl.aliexpress.com/item/32830756646.html
 
